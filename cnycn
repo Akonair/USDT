@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- Open Graph 元标签 -->
+    <meta property="og:title" content="人民币通道服务">
+    <meta property="og:description" content="提供高速、稳定、安全、可靠的服务。">
+    <meta property="og:url" content="https://akonair.github.io/USDT/cnyen.html">
+    <meta property="og:image" content="https://akonair.github.io/USDT/cnyentu.png">
+    <meta property="og:site_name" content="人民币通道服务">
+    <meta property="og:type" content="website">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人民币通道服务</title>
+    <style>
+        body {
+            font-family: 'Arial Black', 'Arial', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            background-image: url('https://raw.githubusercontent.com/Akonair/USDT/main/background.jpg'); /* 使用背景图片 */
+            background-size: cover; /* 覆盖整个页面 */
+            background-position: center; /* 居中对齐 */
+            background-repeat: no-repeat; /* 不平铺 */
+            background-attachment: fixed; /* 固定背景 */
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #f8f9fa; /* 浅灰色底板，与背景图片和文字对比更佳 */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border: 2px solid #d4a017; /* 保留深金色边框 */
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            border-bottom: 4px solid #d4a017;
+            padding-bottom: 15px;
+            margin-top: 35px;
+            font-weight: bold;
+        }
+        ul, ol {
+            padding-left: 25px;
+        }
+        .important {
+            color: #e74c3c;
+            font-weight: bold;
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 5px solid #e74c3c;
+            border-radius: 8px;
+            margin: 15px 0;
+            box-shadow: 0 2px 5px rgba(231, 76, 60, 0.2);
+        }
+        .note {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-left: 5px solid #2c3e50;
+            border-radius: 8px;
+            margin: 15px 0;
+            box-shadow: 0 2px 5px rgba(44, 62, 80, 0.1);
+        }
+        img, video {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border: 2px solid #d4a017;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(212, 160, 23, 0.3);
+        }
+        video {
+            background-color: #000;
+        }
+        .flowchart {
+            text-align: center;
+            margin: 25px 0;
+        }
+        .flowchart img {
+            max-width: 85%;
+        }
+        .section {
+            margin-bottom: 35px;
+        }
+        .header {
+            text-align: center;
+            color: #d4a017;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        .footer {
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 2px solid #d4a017;
+            font-size: 14px;
+        }
+        .profit-highlight {
+            color: #d4a017;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">人民币 <br><span class="profit-highlight">通道服务</span><br><span class="profit-highlight">安全可靠！</span></div>
+
+        <div class="section">
+            <h2>服务时间</h2>
+            <p>（所有服务时间均为北京时间）</p>
+            <ul>
+                <li><strong>人民币充值</strong>：周一至周日，全天24小时</li>
+                <li><strong>人民币提现</strong>：周一至周日，08:00 – 23:00</li>
+                <li><strong>USDT提现</strong>：周一至周日，10:00 – 次日02:00</li>
+                <li><strong>USDT充值</strong>：全天24小时（存款成功后资金将自动到账）</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>交易限额</h2>
+            <ul>
+                <li><strong>单笔人民币充值限额</strong>：3,000 – 150,000 人民币</li>
+                <li><strong>单笔人民币提现限额</strong>：3,000 – 50,000 人民币</li>
+                <li>（我们为需要大额交易的重要客户提供定制化解决方案。）</li>
+                <li><strong>单笔USDT提现限额</strong>：200,000 USDT</li>
+                <li><strong>每日USDT提现限额</strong>：800,000 USDT</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>充值重要提示</h2>
+            <p class="important">本平台不支持第三方支付充值。请确保付款由账户持有人直接操作，以保障资金安全。感谢您的配合。</p>
+        </div>
+
+        <div class="section">
+            <h2>通道详情</h2>
+            <ul>
+                <li><strong>支付宝/微信支付</strong>：不支持企业账户</li>
+                <li><strong>银行转账</strong>：不支持工商银行/不支持企业账户</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>客户支持</h2>
+            <p>如有任何疑问，请联系我们的客户支持团队。</p>
+        </div>
+
+        <div class="footer">
+            © 2025 AK. <span class="profit-highlight">您的支付解决方案伙伴</span>。保留所有权利。
+        </div>
+    </div>
+</body>
+</html>
