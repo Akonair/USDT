@@ -51,6 +51,13 @@
             border-radius: 5px;
             margin: 10px 0;
         }
+        /* 添加图片自适应样式 */
+        .flowchart img {
+            max-width: 100%; /* 图片宽度不超过容器 */
+            height: auto; /* 保持纵横比 */
+            display: block; /* 防止图片底部出现多余间隙 */
+            margin: 0 auto; /* 图片居中 */
+        }
     </style>
 </head>
 <body>
@@ -85,9 +92,12 @@
             <h3>入金流程逻辑</h3>
             <div class="flowchart">
                 <img src="https://raw.githubusercontent.com/Akonair/USDT/main/payin.png" alt="入金流程图" title="入金流程图">
-              <h3>出金流程逻辑</h3>
+            </div>
+            <h3>出金流程逻辑</h3>
             <div class="flowchart">
                 <img src="https://raw.githubusercontent.com/Akonair/USDT/main/payout.png" alt="活期出金流程图" title="活期出金流程图">
+            </div>
+        </div>
         <h2>通道详情</h2>
         <ul>
             <li><span class="highlight">支持的支付方式</span>：
