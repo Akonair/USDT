@@ -2,19 +2,17 @@
 const ACCESS_KEY = "FvDHIIaHOzcItJ199qw5Xv6e1izUrAlc";
 const API_URL = "https://api.exlinked.global/coin/pay/recharge/order/create";
 
-// 签名算法
+// 正确签名算法
 function generateSignature(params) {
-  const keys = Object.keys(params).sort();
+  const keys = Object.keys(params).sort(); // 按 ASCII 升序
   const baseStr = keys.map(k => k + "=" + params[k]).join("&") + "&accessKey=" + ACCESS_KEY;
   return CryptoJS.MD5(baseStr).toString();
 }
 
-// 自动订单号
 function generateOrderNo() {
   return "THBceshi-" + Date.now();
 }
 
-// 私户支付
 function payPrivate() {
   const amount = document.getElementById("amount").value;
   if (!amount || isNaN(amount)) return alert("请输入有效金额");
@@ -45,7 +43,6 @@ function payPrivate() {
   }).catch(err => alert("请求异常: " + err));
 }
 
-// 公户支付
 function payPublic() {
   const amount = document.getElementById("amount").value;
   const name = document.getElementById("paymentName").value;
