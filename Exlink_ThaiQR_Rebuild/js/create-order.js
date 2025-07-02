@@ -1,6 +1,6 @@
 
 const ACCESS_KEY = "FvDHIIaHOzcItJ199qw5Xv6e1izUrAlc";
-const API_URL = "https://api.exlinked.global/coin/pay/recharge/order/crete";
+const API_URL = "https://api.exlinked.global/coin/pay/recharge/order/create";
 
 // 签名算法
 function generateSignature(params) {
