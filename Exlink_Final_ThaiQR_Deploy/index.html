@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Exlink ThaiQR收银台</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1 id="title">Exlink ThaiQR Payment</h1>
+    <div class="language">
+      <button onclick="setLang('en')">English</button>
+      <button onclick="setLang('th')">ไทย</button>
+    </div>
+    <label id="amountLabel" for="amount">Amount (THB)</label>
+    <input id="amount" placeholder="Enter amount in THB" />
+
+    <div id="publicFields" style="display: none;">
+      <label id="nameLabel">Name</label>
+      <input id="paymentName" placeholder="Account Holder Name" />
+      <label id="cardLabel">Card Number</label>
+      <input id="paymentCardNumber" placeholder="Card Number" />
+    </div>
+
+    <div class="actions">
+      <button onclick="payPrivate()" id="privateBtn">Pay via Personal QR</button>
+      <button onclick="payPublic()" id="publicBtn">Pay via Company QR</button>
+    </div>
+  </div>
+
+  <div id="payFrame" class="modal">
+    <iframe id="paymentIframe" frameborder="0"></iframe>
+  </div>
+
+  <script src="./js/lang.js"></script>
+  <script src="./js/create-order.js"></script>
+</body>
+</html>
