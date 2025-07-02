@@ -1,1 +1,39 @@
-<h2>This is private account QR page</h2><p>Simulated QR Here</p>
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ชำระเงิน - ThaiQR</title>
+  <style>
+    body { font-family: sans-serif; background: #f9f9f9; padding: 20px; text-align: center; }
+    .qr-box { background: white; border-radius: 8px; padding: 20px; max-width: 400px; margin: 40px auto; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    img { width: 250px; margin-top: 20px; }
+    .timer { margin-top: 10px; font-size: 18px; color: #d9534f; }
+  </style>
+</head>
+<body>
+  <div class="qr-box">
+    <h2>กรุณาสแกน QR เพื่อชำระเงิน</h2>
+    <p>บัญชีบุคคลทั่วไป · ThaiQR พร้อมเพย์</p>
+    <img src="https://chart.googleapis.com/chart?cht=qr&chs=300x300&chl=EXLINKDEMO:TEST:THB&chld=L|1" alt="QR Code" />
+    <div class="timer">⏳ คำสั่งซื้อหมดอายุใน <span id="countdown">07:00</span></div>
+  </div>
+
+  <script>
+    let totalSeconds = 7 * 60;
+    const countdownEl = document.getElementById('countdown');
+
+    setInterval(() => {
+      totalSeconds--;
+      if (totalSeconds <= 0) {
+        countdownEl.innerText = "หมดเวลาแล้ว";
+        return;
+      }
+      const minutes = Math.floor(totalSeconds / 60);
+      const seconds = totalSeconds % 60;
+      countdownEl.innerText = String(minutes).padStart(2, '0') + ':' + String(seconds).padStart(2, '0');
+    }, 1000);
+  </script>
+</body>
+</html>
