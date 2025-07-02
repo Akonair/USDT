@@ -4,26 +4,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ExlinkGlobal Pay Demo</title>
+  <title>Exlink Pay - Demo</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>💳 ExlinkGlobal Merchant Test</h1>
+    <h1>💳 ExlinkGlobal ThaiQR Demo</h1>
     <p>Enter payment amount in <strong>USD</strong>:</p>
     <input type="number" id="usdAmount" placeholder="e.g. 500" />
     <p>💰 THB to Pay: <span id="thbAmount">-</span></p>
-    <button onclick="openPay()">🧾 Proceed to Payment</button>
+    <button onclick="createOrder()">🧾 Proceed to Payment</button>
     <div id="payFrame" class="iframe-container" style="display:none;">
       <iframe id="paymentIframe" src="" frameborder="0"></iframe>
     </div>
-    <div class="lang-switch">
-      <button onclick="switchLang('en')">English</button>
-      <button onclick="switchLang('th')">ไทย</button>
-    </div>
   </div>
-  <script src="js/exchange.js"></script>
-  <script src="js/pay-popup.js"></script>
-  <script src="js/i18n.js"></script>
+  <script>
+    const rate = 33.21;
+    document.getElementById('usdAmount').addEventListener('input', function () {
+      const usd = parseFloat(this.value);
+      document.getElementById('thbAmount').innerText = isNaN(usd) ? '-' : Math.round(usd * rate);
+    });
+  </script>
+  <script src="js/create-order.js"></script>
 </body>
 </html>
