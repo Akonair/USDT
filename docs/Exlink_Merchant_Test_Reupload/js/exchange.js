@@ -1,1 +1,0 @@
-// USD to THB logic
