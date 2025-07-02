@@ -4,7 +4,7 @@ const API_URL = "https://api.exlinked.global/coin/pay/recharge/order/create";
 
 // 正确签名算法
 function generateSignature(params) {
-  const keys = Object.keys(params).sort(); // 按 ASCII 升序
+  const keys = Object.keys(params).filter(k => k !== "signature").sort(); // ASCII升序
   const baseStr = keys.map(k => k + "=" + params[k]).join("&") + "&accessKey=" + ACCESS_KEY;
   return CryptoJS.MD5(baseStr).toString();
 }
@@ -33,9 +33,9 @@ function payPrivate() {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data)
   }).then(res => res.json()).then(res => {
-    if (res.data && res.data.qrCodeUrl) {
+    if (res.data && res.data.qrcode) {
       const iframe = document.getElementById("paymentIframe");
-      iframe.src = "pay/private.html?qr=" + encodeURIComponent(res.data.qrCodeUrl) + "&expires=420";
+      iframe.src = "pay/private.html?qr=" + encodeURIComponent(res.data.qrcode) + "&expires=420";
       document.getElementById("payFrame").style.display = "flex";
     } else {
       alert("下单失败：" + (res.message || "未知错误"));
@@ -68,9 +68,9 @@ function payPublic() {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data)
   }).then(res => res.json()).then(res => {
-    if (res.data && res.data.qrCodeUrl) {
+    if (res.data && res.data.qrcode) {
       const iframe = document.getElementById("paymentIframe");
-      iframe.src = "pay/private.html?qr=" + encodeURIComponent(res.data.qrCodeUrl) + "&expires=1200";
+      iframe.src = "pay/private.html?qr=" + encodeURIComponent(res.data.qrcode) + "&expires=1200";
       document.getElementById("payFrame").style.display = "flex";
     } else {
       alert("下单失败：" + (res.message || "未知错误"));
