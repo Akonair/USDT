@@ -1,42 +1,30 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Exlink THB 收银台</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <script src="js/create-order.js" defer></script>
+    <meta charset="UTF-8">
+    <title>Exlink THB 收银台</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <img src="images/logo.png" alt="Exlink Logo" />
-      <h1>Exlink THB 收银台</h1>
+    <div class="container">
+        <h1>Exlink THB 收银台</h1>
+        <input type="number" id="usdAmount" placeholder="请输入金额（USD）" />
+        <button onclick="createOrder('private')">使用 ThaiQR 私户</button>
+        <button onclick="createOrder('corporate')">使用 ThaiQR 公户</button>
     </div>
 
-    <label>请输入金额（例如 500 USD）：</label>
-    <input type="number" id="usdAmount" placeholder="USD" />
-    <p>≈ <span id="convertedTHB">0</span> THB</p>
-
-    <div class="input-group">
-      <button onclick="openPrivate()">使用 ThaiQR 私户</button>
-      <button onclick="openCorporate()">使用 ThaiQR 公户</button>
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>请扫码支付</h2>
+            <div id="qrcode"></div>
+            <p id="bankInfo"></p>
+            <p id="countdown"></p>
+        </div>
     </div>
 
-    <div id="corporateFields" style="display: none">
-      <input type="text" id="cardNumber" placeholder="卡号 (公户必填)" />
-      <input type="text" id="cardName" placeholder="姓名 (公户必填)" />
-    </div>
-  </div>
-
-  <div id="qrModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h2 id="modalTitle">请扫码支付</h2>
-      <img id="qrcodeImg" src="" alt="二维码图" />
-      <p id="bankInfo"></p>
-      <p>剩余时间 <span id="countdown">--</span></p>
-    </div>
-  </div>
+    <script src="js/create-order.js"></script>
 </body>
 </html>
