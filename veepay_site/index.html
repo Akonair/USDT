@@ -2,69 +2,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Veepay: More than pay, it's we pay. 专业、安全、便捷的多币种支付解决方案。" />
-  <meta name="keywords" content="Veepay, Payment, 多币种支付, 跨境支付, 全球支付, Fintech" />
-  <meta name="author" content="Veepay" />
-  <meta property="og:title" content="Veepay | More than pay, it's we pay" />
-  <meta property="og:description" content="Veepay 不只是支付，更是 We Pay——与客户一起创造价值的支付伙伴。" />
-  <title>Veepay | More than Pay, it's We Pay</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Veepay | Your Trusted Payment Partner</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <header>
     <div class="logo">Veepay</div>
     <nav>
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
+        <li><a href="#services">服务</a></li>
         <li><button onclick="toggleLang()">EN / 中文</button></li>
       </ul>
     </nav>
   </header>
+
   <section class="hero">
-    <svg id="network-bg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice">
-      <path d="M 100 200 Q 200 100 400 200 T 700 200" stroke="url(#grad)" stroke-width="2" fill="none">
-        <animate attributeName="stroke-dashoffset" from="1000" to="0" dur="4s" repeatCount="indefinite" />
-      </path>
-      <defs>
-        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#7D00FE" />
-          <stop offset="100%" stop-color="#C89B3C" />
-        </linearGradient>
-      </defs>
-    </svg>
-    <h1 id="hero-title">Veepay: More than Pay, it's We Pay</h1>
-    <p id="hero-sub">不仅仅是支付，更是伙伴</p>
+    <h1 id="hero-title">Veepay：值得信赖的支付伙伴</h1>
+    <p id="hero-sub">多元、高效、专业的多币种支付解决方案</p>
     <a href="#contact" class="cta">立即开始</a>
   </section>
-  <section id="about">
-    <h2>关于 Veepay</h2>
-    <p>Veepay，承载“我们与客户携手支付、共创价值”的理念。品牌名称中的 “Vee” 体现多元、高效、专业，Veepay 始终作为客户值得信赖的支付伙伴。Vee 也代表 Versatility（多元）、Efficiency（高效）、Expertise（专业），体现 Veepay 作为多币种一站式支付解决方案的专业与灵活。Veepay，不只是 Pay，更是 We Pay——与客户一起创造价值的支付伙伴。</p>
-  </section>
-  <section id="services">
-    <h2>我们的服务</h2>
-    <div class="services-cards">
-      <div class="card">外汇及数字资产平台入金</div>
-      <div class="card">游戏与电商收款</div>
-      <div class="card">跨境贸易支付</div>
-      <div class="card">本地钱包与银行卡支付解决方案</div>
+
+  <section class="services">
+    <div class="services-text">
+      <h2 id="services-title">我们的服务</h2>
+      <ul id="services-list">
+        <li>外汇及数字资产平台入金</li>
+        <li>游戏与电商收款</li>
+        <li>跨境贸易支付</li>
+        <li>本地钱包与银行卡支付解决方案</li>
+      </ul>
     </div>
-    <p>支持多方支付和分账。在您的平台或市场中无缝集成端到端支付体验。</p>
-  </section>
-  <section class="logos">
-    <div class="logo-grid">
-      <img src="assets/img/momo-seeklogo.svg" alt="Momo" />
-      <img src="assets/img/zalopay-seeklogo.svg" alt="ZaloPay" />
-      <img src="assets/img/orient-commercial-joint-stock-bank-seeklogo.eps" alt="OCB" />
-      <img src="assets/img/quick-response-code-indonesia-standard-qris-seeklogo.svg" alt="QRIS" />
-      <img src="assets/img/viettelpay-seeklogo-2.svg" alt="ViettelPay" />
+    <div class="services-logos">
+      <div class="logo-card"><img src="assets/img/momo-seeklogo.svg" alt="Momo"></div>
+      <div class="logo-card"><img src="assets/img/zalopay-seeklogo.svg" alt="ZaloPay"></div>
+      <div class="logo-card"><img src="assets/img/orient-commercial-joint-stock-bank-seeklogo.eps" alt="OCB"></div>
+      <div class="logo-card"><img src="assets/img/quick-response-code-indonesia-standard-qris-seeklogo.svg" alt="QRIS"></div>
     </div>
   </section>
+
   <footer>
     <p>© 2025 Veepay. All rights reserved.</p>
   </footer>
+
   <script src="assets/js/main.js"></script>
 </body>
 </html>
