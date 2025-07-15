@@ -1,1 +1,12 @@
-body { font-family: sans-serif; background: linear-gradient(135deg, #7D00FE, #C89B3C); color: #fff; }
+
+body { font-family: Inter, sans-serif; margin: 0; background: #f9f9fb; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: #fff; position: sticky; top: 0; }
+.hero { background: linear-gradient(135deg, #7D00FE, #C89B3C); color: #fff; text-align: center; padding: 100px 20px; position: relative; overflow: hidden; }
+h1 { margin: 0; font-size: 2rem; }
+.cta { background: #fff; color: #7D00FE; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: bold; margin-top: 1rem; display: inline-block; }
+.services-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 1rem 0; }
+.card { background: #fff; padding: 1rem; border-radius: 8px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: all 0.3s ease; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.logo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); gap: 1rem; justify-items: center; padding: 2rem 1rem; }
+.logo-grid img { max-width: 60px; }
+footer { text-align: center; padding: 1rem; background: #fff; }
