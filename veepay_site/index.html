@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Veepay | Your Trusted Payment Partner</title>
+  <title>Veepay | More than Pay, it's We Pay</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -12,34 +12,47 @@
     <div class="logo">Veepay</div>
     <nav>
       <ul>
-        <li><a href="#services">服务</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
         <li><button onclick="toggleLang()">EN / 中文</button></li>
       </ul>
     </nav>
   </header>
 
   <section class="hero">
-    <h1 id="hero-title">Veepay：值得信赖的支付伙伴</h1>
-    <p id="hero-sub">多元、高效、专业的多币种支付解决方案</p>
-    <a href="#contact" class="cta">立即开始</a>
+    <h1 id="hero-title">Veepay: More than Pay, it's We Pay</h1>
+    <p id="hero-sub">Not just payment, but partnership</p>
+    <a href="#contact" class="cta">Get Started</a>
   </section>
 
-  <section class="services">
-    <div class="services-text">
-      <h2 id="services-title">我们的服务</h2>
-      <ul id="services-list">
-        <li>外汇及数字资产平台入金</li>
-        <li>游戏与电商收款</li>
-        <li>跨境贸易支付</li>
-        <li>本地钱包与银行卡支付解决方案</li>
-      </ul>
+  <section id="about">
+    <h2 id="about-title">The backbone for global commerce</h2>
+    <p id="about-text">Veepay makes moving money as easy and programmable as moving data. Our teams are based in offices around the world and we process hundreds of billions of dollars each year for ambitious businesses of all sizes.</p>
+  </section>
+
+  <section id="services" class="services">
+    <h2 id="services-title">Our Services</h2>
+    <div class="services-cards">
+      <div class="card">Forex & Crypto Deposits</div>
+      <div class="card">Gaming & E-commerce Payments</div>
+      <div class="card">Cross-border Trade</div>
+      <div class="card">Local Wallets & Bank Cards</div>
     </div>
-    <div class="services-logos">
-      <div class="logo-card"><img src="assets/img/momo-seeklogo.svg" alt="Momo"></div>
-      <div class="logo-card"><img src="assets/img/zalopay-seeklogo.svg" alt="ZaloPay"></div>
-      <div class="logo-card"><img src="assets/img/orient-commercial-joint-stock-bank-seeklogo.eps" alt="OCB"></div>
-      <div class="logo-card"><img src="assets/img/quick-response-code-indonesia-standard-qris-seeklogo.svg" alt="QRIS"></div>
+    <p id="services-desc">Set up multiparty payments and payouts. Integrate payments into your platform or marketplace for end-to-end payments experiences.</p>
+  </section>
+
+  <section class="logos">
+    <div class="logo-grid">
+      <img src="assets/img/momo-seeklogo.svg" alt="Momo">
+      <img src="assets/img/zalopay-seeklogo.svg" alt="ZaloPay">
+      <img src="assets/img/orient-commercial-joint-stock-bank-seeklogo.eps" alt="OCB">
+      <img src="assets/img/quick-response-code-indonesia-standard-qris-seeklogo.svg" alt="QRIS">
+      <img src="assets/img/viettelpay-seeklogo-2.svg" alt="ViettelPay">
     </div>
+  </section>
+
+  <section id="globe">
+    <canvas id="globe-canvas"></canvas>
   </section>
 
   <footer>
@@ -47,5 +60,22 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script src="https://unpkg.com/three@0.140.0/build/three.min.js"></script>
+  <script src="https://unpkg.com/three-globe"></script>
+  <script>
+    const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('globe-canvas'), antialias: true });
+    renderer.setSize(window.innerWidth, 400);
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / 400, 0.1, 1000);
+    camera.position.z = 300;
+    const globe = new ThreeGlobe();
+    scene.add(globe);
+    const animate = () => {
+      requestAnimationFrame(animate);
+      globe.rotation.y += 0.001;
+      renderer.render(scene, camera);
+    };
+    animate();
+  </script>
 </body>
 </html>
