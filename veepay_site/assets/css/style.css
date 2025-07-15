@@ -75,3 +75,28 @@ footer {
   background: #fff;
   border-top: 1px solid #eee;
 }
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.logo-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.logo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+.logo-card img {
+  max-width: 80px;
+  filter: brightness(0) saturate(100%) invert(79%) sepia(60%) saturate(400%) hue-rotate(10deg) brightness(95%) contrast(85%);
+}
