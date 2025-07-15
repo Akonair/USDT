@@ -1,18 +1,19 @@
 
-let lang = 'en';
+let lang = 'zh';
 function toggleLang() {
   lang = lang === 'en' ? 'zh' : 'en';
-  if (lang === 'zh') {
-    document.getElementById('hero-title').innerText = 'Veepay：不仅仅是支付，更是伙伴';
-    document.getElementById('hero-sub').innerText = '多元、高效、专业的多币种支付解决方案。';
-    document.getElementById('about-title').innerText = '关于 Veepay';
-    document.getElementById('about-text').innerText = 'Veepay 致力于与客户携手创造价值，提供多元、高效、专业的全球支付解决方案。';
-    document.getElementById('services-title').innerText = '我们的服务';
-  } else {
-    document.getElementById('hero-title').innerText = "Veepay: More than Pay, it's We Pay";
-    document.getElementById('hero-sub').innerText = 'Your trusted partner for versatile, efficient, and expert multi-currency payment solutions.';
-    document.getElementById('about-title').innerText = 'About Veepay';
-    document.getElementById('about-text').innerText = 'Veepay is committed to working hand-in-hand with clients to create value together. We offer versatile, efficient, and expert payment solutions globally.';
-    document.getElementById('services-title').innerText = 'Our Services';
-  }
+  document.getElementById('hero-title').innerText = lang === 'en' ? "Veepay: Your Trusted Payment Partner" : "Veepay：值得信赖的支付伙伴";
+  document.getElementById('hero-sub').innerText = lang === 'en' ? "Versatile, efficient, and expert multi-currency payment solutions" : "多元、高效、专业的多币种支付解决方案";
+  document.getElementById('services-title').innerText = lang === 'en' ? "Our Services" : "我们的服务";
+  document.getElementById('services-list').innerHTML = lang === 'en' ? `
+    <li>Forex & Crypto Deposits</li>
+    <li>Gaming & E-commerce Payments</li>
+    <li>Cross-border Trade</li>
+    <li>Local Wallets & Bank Cards</li>
+  ` : `
+    <li>外汇及数字资产平台入金</li>
+    <li>游戏与电商收款</li>
+    <li>跨境贸易支付</li>
+    <li>本地钱包与银行卡支付解决方案</li>
+  `;
 }
