@@ -122,9 +122,11 @@
         <div class="section">
             <h2>交易限额</h2>
             <ul>
-                <li><strong>单笔 VND 入金限额</strong>: 100,000 VND – 300,000,000 VND</li>
-                <li>(单笔大额入金需人工审批): 300,000,001 VND – 500,000,000 VND</li>
-                <li><strong>单笔 VND 出金限额</strong>: 1,000,000 VND – 200,000,000 VND</li>
+                <li><strong>银行卡收单：单笔 VND 入金限额</strong>: 100,000 VND – 300,000,000 VND</li>
+                 <li>(单笔大额入金需人工审批): 300,000,001 VND – 500,000,000 VND</li>
+                <li><strong>虚拟帐户（VA）收单：单笔 VND 入金限额</strong>: 100,000 VND – 499,999,999 VND（3亿以上有飘帐风险）</li>
+                <li><strong>银行卡单笔 VND 出金限额</strong>: 250,000 VND – 200,000,000 VND</li>
+                <li><strong>企业帐户（VA）单笔 VND 出金限额</strong>: 10,000,000 VND – 300,000,000 VND</li>
                 <li><strong>单笔 USDT 提款限额</strong>: 200,000 USDT</li>
                 <li><strong>每日 USDT 提款限额</strong>: 800,000 USDT</li>
             </ul>
@@ -140,9 +142,9 @@
         <div class="section">
             <h2>通道详情</h2>
             <ul>
-                <li><strong>扫码通道</strong>: 皆可以跨行扫码入款支持全越南银行，MOMO/ZALO/VT Pay等电子钱包</li>
+                <li><strong>扫码通道</strong>: 皆可以跨行扫码入款支持全越南银行，VA帐户支持MOMO/ZALO/VT Pay等电子钱包</li>
                 <li><strong>直连支持</strong>: 仅支持 VTB 和 VCB 两家银行</li>
-                <li><strong>出金方式</strong>: 仅支持银行转账出金（不支持扫码出金）</li>
+                <li><strong>出金方式</strong>: 支持个户/公户银行转账出金（不支持扫码出金）</li>
             </ul>
         </div>
 
@@ -154,7 +156,7 @@
             <div class="flowchart">
                 <img src="https://raw.githubusercontent.com/Akonair/USDT/main/payin.png" alt="入金流程图" title="入金流程图">
             </div>
-            <p><strong>说明</strong>: 入金流程，用户选择银行直连或二维码支付的决策路径。</p>
+            <p><strong>说明</strong>: 入金流程，用户选择银行直连/VietQR/VA支付的决策路径。</p>
 
             <h3>银行直连入金步骤（VCB示例）</h3>
             <video controls>
@@ -171,14 +173,14 @@
             </ol>
             <p class="note"><strong>重要提醒</strong>: 确保存款由账户持有人直接操作，避免因第三方支付导致的延迟或拒绝。</p>
 
-            <h3>二维码入金步骤（QR code示例）</h3>
+            <h3>二维码（VA）入金步骤（QR code示例）</h3>
             <img src="https://raw.githubusercontent.com/Akonair/USDT/main/qr-code.png" alt="ACB QR 码与支付界面" title="ACB QR 码与支付界面">
             <img src="https://raw.githubusercontent.com/Akonair/USDT/main/newqr.png" alt="ACB QR 码与支付界面" title="OCB VA QR 码与支付界面">
             <ol>
                 <li><strong>打开 任何移动银行</strong>: 在您的智能手机上启动 任何移动银行应用。</li>
                 <li><strong>扫描 QR 码</strong>: 点击“QR Pay”功能，扫描提供的 QR 。</li>
                 <li><strong>确认支付</strong>: 验证交易详情（备注、金额），然后点击确认完成支付。</li>
-                <p class="important">若为大额入金则需要手动更改金额。</p>
+                <p class="important">VA支持手动输入帐号。</p>
             </ol>
             <p class="note"><strong>重要提示</strong>: 避免重复扫描 QR 码，以防止重复支付。每次交易后，请检查账户余额并保存交易记录。</p>
         
